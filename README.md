@@ -1,4 +1,4 @@
-# Advanced Programming Techniques - CA_ONE (30%)
+# Advanced Programming Techniques - CA_ONE
 
 **Student ID**: 20068781
 **Name**: Jay Chunekar
