@@ -1,108 +1,116 @@
-Advanced Programming Techniques - CA ONE
-Student Number: 20068781
-Course: M.Sc. Cyber Security
-Module: B9CY108 - Advanced Programming Techniques
-Submission Date: December 13, 2025
+# Advanced Programming Techniques - CA_ONE
 
-Assignment Overview
-This repository contains implementations for four programming problems demonstrating advanced programming concepts in C# and Python.
+**Student ID**: 20068781  
+**Name**: Jay Chunekar  
+**Course**: MSc Cyber Security  
+**Module**: B9CY108  
 
-Project Structure
-Programming-CA-1-20068781/
-│
-├── Question1_ContactBook/          # C# Contact Book Management System
-│   ├── Program.cs
-│   └── Screenshots/
-│
-├── Question2_FileExtension/        # C# File Extension Information System
-│   ├── Program.cs
-│   └── Screenshots/
-│
-├── Question3_ClientServer/         # Python Client-Server Application
-│   ├── Que3_server.py
-│   ├── Que3_client.py
-│   ├── dbs_applications.db
-│   └── Screenshots/
-│
-├── Question4_HotelScraper/         # Python Hotel Data Extraction System
-│   ├── Que4.py
-│   ├── hotel_data.csv
-│   ├── seaside_paradise.html
-│   ├── mountain_view_lodge.html
-│   └── Screenshots/
-│
-└── CA_ONE_REPORT.pdf               # Complete assignment report
-Technologies Used
-Part I - C# Programming
+## Project Structure
 
-Question 1: Object-oriented programming, List data structure, CRUD operations
-Question 2: Dictionary data structure, file extension knowledge base
+### Question 1: Contact Book Management System (C#)
+- `Program.cs` - Contact book application with CRUD operations
+- `ContactBookApp.csproj` - Project file
+- `screenshots/` - Screenshots showing working application
 
-Part II - Python Programming
+### Question 2: File Extension Information System (C#)
+- `Program.cs` - File extension lookup system
+- `FileExtensionApp.csproj` - Project file
+- `screenshots/` - Screenshots showing working application
 
-Question 3: TCP socket programming, SQLite database, JSON serialization
-Question 4: BeautifulSoup (web scraping), CSV file handling, data analysis
+### Question 3: Client-Server Application (Python)
+- `Que3_server.py` - Server application for DBS admissions
+- `Que3_client.py` - Client application for student applications
+- `dbs_applications.db` - SQLite database storing applications
+- `screenshots/` - Screenshots showing working application
 
-How to Run
-Question 1 & 2 (C#)
+### Question 4: Hotel Data Extraction System (Python)
+- `Que4.py` - Web scraping application for hotel data
+- `seaside_paradise.html` - Sample hotel 1 webpage
+- `mountain_view_lodge.html` - Sample hotel 2 webpage
+- `hotel_data.csv` - Generated CSV with extracted data
+- `screenshots/` - Screenshots showing working application
 
-Open the .csproj file in Visual Studio or VS Code
-Build and run the project
-Follow the console menu instructions
+## How to Run
 
-Question 3 (Python - Client-Server)
+### Question 1 - Contact Book Management System
+**Using Visual Studio**
+```bash
+Open ContactBookApp.sln and press F5 to run
+```
+**Using Command Line**
+```bash
+cd Question1_ContactBook
+dotnet run
+```
 
-First, start the server:
+### Question 2 - File Extension Information System
+**Using Visual Studio**
+```bash
+Open FileExtensionApp.sln and press F5 to run
+```
+**Using Command Line**
+```bash
+cd Question2_FileExtension
+dotnet run
+```
 
-bash   python Que3_server.py
+### Question 3 - Client-Server Application
+**Step 1: Start the Server**
+```bash
+python Que3_server.py
+```
+**Step 2: Run the Client (in new terminal)**
+```bash
+python Que3_client.py
+```
 
-In a new terminal, run the client:
+### Question 4 - Hotel Data Extraction System
+```bash
+python Que4.py
+```
 
-bash   python Que3_client.py
+## Requirements
 
-Follow the prompts to submit an application
+### C# Projects (Question 1 & 2)
+- .NET SDK 6.0 or higher
+- Visual Studio 2022 or VS Code (optional)
 
-Question 4 (Python - Web Scraping)
-bashpython Que4.py
-The program will generate hotel_data.csv with extracted data.
+### Python Projects (Question 3 & 4)
+- Python 3.10 or higher
+- Built-in modules: socket, sqlite3, json, uuid, csv, datetime
+- External module: beautifulsoup4
 
-Dependencies
-Python Requirements
+**Install Python dependencies:**
+```bash
+pip install beautifulsoup4
+```
 
-beautifulsoup4
-sqlite3 (built-in)
-socket (built-in)
-csv (built-in)
-json (built-in)
+## Key Features
 
-Install required packages:
-bashpip install beautifulsoup4
+### Question 1
+- 20 pre-populated contacts
+- CRUD operations (Create, Read, Update, Delete)
+- Mobile number validation (9 digits)
+- Method overloading demonstration
+- Object-oriented programming principles
 
-Key Features
-Contact Book (Q1)
+### Question 2
+- 25+ file extensions database
+- Dictionary-based fast lookup
+- Category-based browsing
+- Graceful error handling for unknown extensions
 
-20 pre-populated contacts
-Complete CRUD operations
-Mobile number validation (9 digits)
-Method overloading demonstration
+### Question 3
+- TCP connection-oriented protocol
+- SQLite database for persistent storage
+- UUID-based unique application numbers
+- Input validation with retry mechanism
 
-File Extension System (Q2)
+### Question 4
+- HTML parsing using BeautifulSoup
+- Dynamic pricing with weekend/holiday premiums
+- CSV data export
+- Statistical analysis (min, max, average prices)
 
-25+ file extensions database
-Category-based browsing
-Fast dictionary lookup
-Graceful error handling
-
-Client-Server Application (Q3)
-
-TCP connection-oriented protocol
-SQLite database persistence
-UUID-based application numbers
-Input validation with retry logic
-
-Hotel Data Scraper (Q4)
-
-HTML parsing with BeautifulSoup
-Dynamic pricing calculations
-Weekend and holiday premiums
-CSV export with statistical analysis
+## Submission Date
+December 13, 2025
