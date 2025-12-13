@@ -4,17 +4,16 @@
 **Name**: Jay Chunekar  
 **Course**: MSc Cyber Security  
 **Module**: B9CY108  
+**Lecturer Name**: Swati Dongre 
 
 ## Project Structure
 
 ### Question 1: Contact Book Management System (C#)
-- `Program.cs` - Contact book application with CRUD operations
-- `ContactBookApp.csproj` - Project file
+- `Que1.cs` - Contact book application with CRUD operations
 - `screenshots/` - Screenshots showing working application
 
 ### Question 2: File Extension Information System (C#)
-- `Program.cs` - File extension lookup system
-- `FileExtensionApp.csproj` - Project file
+- `Que2.cs` - File extension lookup system
 - `screenshots/` - Screenshots showing working application
 
 ### Question 3: Client-Server Application (Python)
@@ -35,24 +34,15 @@
 ### Question 1 - Contact Book Management System
 **Using Visual Studio**
 ```bash
-Open ContactBookApp.sln and press F5 to run
-```
-**Using Command Line**
-```bash
-cd Question1_ContactBook
-dotnet run
+Open Que1.cs and press F5 to run
 ```
 
 ### Question 2 - File Extension Information System
 **Using Visual Studio**
 ```bash
-Open FileExtensionApp.sln and press F5 to run
+Open Que2.cs and press F5 to run
 ```
-**Using Command Line**
-```bash
-cd Question2_FileExtension
-dotnet run
-```
+
 
 ### Question 3 - Client-Server Application
 **Step 1: Start the Server**
@@ -73,7 +63,7 @@ python Que4.py
 
 ### C# Projects (Question 1 & 2)
 - .NET SDK 6.0 or higher
-- Visual Studio 2022 or VS Code (optional)
+- VS Code
 
 ### Python Projects (Question 3 & 4)
 - Python 3.10 or higher
@@ -111,6 +101,3 @@ pip install beautifulsoup4
 - Dynamic pricing with weekend/holiday premiums
 - CSV data export
 - Statistical analysis (min, max, average prices)
-
-## Submission Date
-December 13, 2025
