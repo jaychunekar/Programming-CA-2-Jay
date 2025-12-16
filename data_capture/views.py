@@ -29,15 +29,6 @@ def home(request):
 
 @login_required
 def delete_source(request, pk):
-    """
-    Allow a user to 'undo' an upload:
-
-    - Only the owner (request.user) can undo.
-    - Deletes the uploaded file from disk (if it exists).
-    - Deletes any related ExtractedData rows.
-    - Deletes the DataSource row.
-    - Logs an audit event.
-    """
     source = get_object_or_404(DataSource, pk=pk, user=request.user)
 
     if request.method != 'POST':
@@ -73,7 +64,7 @@ def delete_source(request, pk):
 # 3) Delete the DataSource itself
     source.delete()
 
-    messages.success(request, "Your upload has been removed (undo successful).")
+    messages.success(request, "Your upload has been removed .")
     return redirect('home')
 
 
@@ -287,6 +278,10 @@ def source_detail(request, pk):
                 # Just pass the whole dict to display details
                 image_data = parsed
 
+    image_url = None
+    if source.source_type == "image" and source.file_name:
+        image_url = settings.MEDIA_URL + "uploads/" + source.file_name
+
     context = {
         'source': source,
         'extracted_obj': extracted_obj,
@@ -295,6 +290,7 @@ def source_detail(request, pk):
         'excel_sheets': excel_sheets,
         'image_data': image_data,
         'raw_data': raw_data,
+        'image_url': image_url,
     }
 
     return render(request, 'data_capture/source_detail.html', context)

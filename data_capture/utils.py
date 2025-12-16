@@ -2,8 +2,11 @@ import os
 import PyPDF2
 import pdfplumber
 import pandas as pd
+import pytesseract
 from PIL import Image
 from django.conf import settings
+
+pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
 # Optional: pytesseract for OCR (requires Tesseract OCR to be installed)
 try:
@@ -102,7 +105,6 @@ def extract_image_data(file_path):
                     'format': image.format,
                     'size': image.size,
                     'mode': image.mode,
-                    'note': 'OCR not available. Install Tesseract OCR for text extraction.'
                 }
         else:
             # If pytesseract is not installed, return image metadata
@@ -111,7 +113,6 @@ def extract_image_data(file_path):
                 'format': image.format,
                 'size': image.size,
                 'mode': image.mode,
-                'note': 'OCR not available. Install pytesseract and Tesseract OCR for text extraction.'
             }
     except Exception as e:
         print(f"Error extracting image data: {e}")

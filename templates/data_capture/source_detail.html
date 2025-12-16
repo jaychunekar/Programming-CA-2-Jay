@@ -95,7 +95,7 @@
           </div>
           <div class="card-body">
             {% if sheet.columns and sheet.rows %}
-              <div class="table-responsive">
+             <div class="table-responsive" style="max-height: 500px; overflow:auto;">
                 <table class="table table-sm table-striped table-bordered">
                   <thead class="table-light">
                     <tr>
@@ -105,7 +105,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    {% for row in sheet.rows|slice:":10" %}
+                    {% for row in sheet.rows %}
                       <tr>
                         {% for cell in row %}
                           <td>{{ cell }}</td>
@@ -114,11 +114,10 @@
                     {% endfor %}
                   </tbody>
                 </table>
-                {% if sheet.row_count > 10 %}
-                  <p class="text-muted small mb-0">
-                    Showing first 10 rows out of {{ sheet.row_count }}.
-                  </p>
-                {% endif %}
+                <p class="text-muted small mb-0">
+  Showing {{ sheet.row_count }} rows.
+</p>
+
               </div>
             {% else %}
               <p class="text-muted mb-0">No data found in this sheet.</p>
@@ -134,7 +133,13 @@
           <h5 class="card-title">
             <i class="bi bi-image"></i> Image Metadata
           </h5>
-
+          {% if image_url %}
+  <div class="text-center mb-3">
+    <img src="{{ image_url }}" class="img-fluid rounded shadow-sm" alt="Uploaded image">
+  </div>
+{% else %}
+  <p class="text-muted">Image preview not available.</p>
+{% endif %}
           <ul class="list-group mb-3">
             <li class="list-group-item d-flex justify-content-between">
               <span><strong>Format</strong></span>
@@ -154,11 +159,6 @@
               <span><strong>Mode</strong></span>
               <span>{{ image_data.mode|default:"N/A" }}</span>
             </li>
-            {% if image_data.note %}
-            <li class="list-group-item">
-              <strong>Note:</strong> {{ image_data.note }}
-            </li>
-            {% endif %}
           </ul>
 
           <h6>Extracted Text</h6>
